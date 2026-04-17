@@ -31,6 +31,7 @@ function closeMenu() {
 $(document).ready(function() {
     // Load the default page
     //$('#hero-content').load('pages/home.html');
+    $('#hero-box').height($('#hero-section').height());
 
     function loadPage(page) {
       $('#hero-box').show("fast");
@@ -73,6 +74,16 @@ $(document).ready(function() {
         history.replaceState(null, null, window.location.pathname + window.location.search);
       }
     }); 
+});
+
+var resizeTimer;
+$(window).on('resize', function() {
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(function() {
+        // Your code here runs 250ms after resizing ends
+        $('#hero-box').height($('#hero-section').height());
+        console.log("Resize complete");
+    }, 250);
 });
 
 // scroll to top functionality
