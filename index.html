@@ -33,20 +33,22 @@
     <title>Welcome to Aureity</title>
   </head>
   <body>
-    <!-- Navbar -->
-    <nav class="nav-bar">
-        <!-- Logo -->  
-        <a href="#" class="logo">
-            <div class="logo-icon">
-                <div class="logo-circle"></div>
-                <div class="logo-bead"></div>
-            </div>
-            <div class="logo-text">
-                <span class="logo-text1">Aureity</span>
- <!--               <span class="logo-text2">Incorporated</span>  -->
-            </div>
-        </a>
-     <!-- Menu Items -->   
+    <!-- header -->
+    <header class="header">
+
+      <!-- Logo -->  
+      <a href="#" class="logo">
+          <div class="logo-icon">
+              <div class="logo-circle"></div>
+              <div class="logo-bead"></div>
+          </div>
+          <div class="logo-text">
+              <span class="logo-text1">Aureity</span>
+          </div>
+      </a>
+
+      <!-- Menu Items --> 
+      <nav class="nav-bar">  
         <ul class="nav-menu">
             <li class="nav-item">
             <a href="about" class="nav-link" id="nav-link">Who we are</a>
@@ -59,9 +61,11 @@
                 >Contact us</a>
             </li>
         </ul>
+      </nav>
 
-     <!-- Dark/light theme switcher -->       
-       <div class="theme-switch">
+      <div class="header-right">
+        <!-- Dark/light theme switcher -->       
+        <div class="theme-switch">
             <input type="checkbox" class="checkbox" id="checkbox" />
             <label for="checkbox" class="label">
                 <ion-icon name="sunny-outline" class="sun"></ion-icon>
@@ -69,14 +73,15 @@
                 <div class="switcher"></div>
             </label>
         </div>
-
-      <!-- Hamburger menu -->
+  
+        <!-- Hamburger menu -->
         <div class="hamburger" id="hamburger">
             <span class="bar"></span>
             <span class="bar"></span>
             <span class="bar"></span>
         </div> 
-    </nav>
+      </div>
+    </header>
 
     <section id="hero-section" class="hero-section">
 
