@@ -34,9 +34,9 @@ html {
 }
 
  body {
-  display:flex;
+  display:grid;
   min-height: 100vh;
-  flex-direction: column;
+  grid-template-rows: auto 1fr auto;
   gap: 2px;
   font-family: Tahoma, sans-serif;
   /* Set the image path */
@@ -126,11 +126,8 @@ body.dark  {
 /* Navigation bar stuff */
 
 .header {
-  /* pin to top */
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 1000;
+  /* pin to top */ 
+
   
   /* layout */
   display: flex;
@@ -277,7 +274,6 @@ body.dark  {
 
 /* Hero section stuff */
 .hero-section {
-  flex: 1; /* Allow the hero section to grow and fill available space */
   display: flex;
   /* color: transparent; */
   color: var(--primary-color);
@@ -291,6 +287,7 @@ body.dark  {
   margin: 20px;
   padding: 20px;
   overflow-y:auto;
+  overscroll-behavior: contain;
   position:relative;
 }
 
@@ -305,12 +302,6 @@ body.dark  {
   background-color: transparent;
 }
 
-
-p.hero-quote {
-  font-size: 1rem;
-  font-style: italic;
-  color: transparent;;
-}
 
 .our-work-item {
   display: flex;
@@ -328,7 +319,23 @@ p.hero-quote {
 .our-work-image {
   width: 25%;
   height: auto;
-  border-radius: 20px;
+  border-radius: 10px;
+}
+
+/* Footer stuff */
+footer {
+  position: sticky;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: right;
+  padding: 0rem;
+}
+
+.copyright-notice {
+  font-size: 0.7rem;
+  color: var(--secondary-color);
+  background-color: rgba(0, 100, 0, 0.5);
 }
 
 /* media setting stuff for small screens*/
@@ -427,18 +434,6 @@ p.hero-quote {
 */
 
 
-  iframe {
-    max-width: 26rem;
-  }
-
-  .about {
-    text-align: center;
-  }
-
-  .persons {
-    grid-template-columns: repeat(1, 1fr);
-  } 
-
 } /* End of media query for max-width: 768px */
 
 @media screen and (max-width: 420px) {
@@ -450,56 +445,8 @@ p.hero-quote {
     font-size: 2rem;
   }
 
-  iframe {
-    max-width: 330px;
-  }
 
-  .stand-1 {
-    left: 140px;
-  }
-  .stand-2 {
-    left: 195px;
-  }
 } /* End of media query for max-width: 420px */
-
-/* Email Subscription section stuff */
-.sub {
-  margin-top: 2rem;
-}
-
-.sub h3 {
-  text-align: center;
-}
-
-form {
-  text-align: center;
-  margin: 0.4rem 2rem;
-}
-
-.email-sub {
-  padding: 0.2rem;
-  border: 1px solid var(--primary-color);
-  border-radius: 4px;
-}
-
-.email-sub:focus {
-  border: 1px solid var(--secondary-color);
-  outline: none;
-}
-
-.submit-btn {
-  background-color: var(--primary-color);
-  color: #fff;
-  padding: 0.3rem;
-  margin: 0 0.5rem;
-  border: none;
-  border-radius: 2px;
-  cursor: pointer;
-}
-
-.submit-btn:hover {
-  background-color: #095cf7;
-}
 
 /* Social icons section stuff */
 .social {
@@ -511,36 +458,6 @@ form {
   font-size: 1.3rem;
 }
 
-/* Footer stuff */
-footer {
-  /* position: fixed; */
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  /*
-  border-top: 1px solid #f1f1f1;
-  box-shadow: 0px -2px 3px #f1f1f1;
-  */
-  text-align: right;
-  padding: 0rem;
-}
 
-.copyright-notice {
-  font-size: 0.7rem;
-  color: var(--secondary-color);
-  background-color: rgba(0, 100, 0, 0.5);
-}
 
-/* Scroll to top button stuff */
-.scroll-up {
-  position: fixed;
-  right: 0.5%;
-  bottom: 3%;
-  cursor: pointer;
-}
-
-.up-arrow {
-  width: 3rem;
-  height: 3rem;
-}
 
